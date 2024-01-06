@@ -49,6 +49,7 @@ const aliases = <IconAliases>{
 }
 
 const iconify = <IconSet>{
+  // @ts-expect-error Parameter props implicitly has an any type.
   component: (props) => {
     // eslint-disable-next-line no-console
     console.log(props)
