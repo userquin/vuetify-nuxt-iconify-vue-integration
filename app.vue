@@ -1,16 +1,23 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue';
+import { Icon } from '@iconify/vue'
 </script>
+
 <template>
   <div>
     <VContainer>
-      <Icon icon="mdi:email" :inline="true"></Icon>
-      <Icon icon="mdi:calendar" :inline="true"></Icon>
-      <VIcon icon="radioOn"></VIcon>
-      <VIcon icon="radioOff"></VIcon>
-      <VBtn color="success" prepend-icon="email">email</VBtn>
-      <VBtn color="success" prepend-icon="calendar">calendar</VBtn>
-      <VBtn color="success" prepend-icon="close">close</VBtn>
+      <Icon icon="mdi:email" :inline="true" />
+      <Icon icon="mdi:calendar" :inline="true" />
+      <VIcon icon="radioOn" />
+      <VIcon icon="radioOff" />
+      <VBtn color="success" prepend-icon="email">
+        email
+      </VBtn>
+      <VBtn color="success" prepend-icon="calendar">
+        calendar
+      </VBtn>
+      <VBtn color="success" prepend-icon="close">
+        close
+      </VBtn>
 
       <v-select
         label="Select"
@@ -22,14 +29,14 @@ import { Icon } from '@iconify/vue';
           'Texas',
           'Wyoming',
         ]"
-      ></v-select>
+      />
 
-      <VCheckbox label="Checkbox"></VCheckbox>
+      <VCheckbox label="Checkbox" />
 
       <VRadioGroup>
-        <VRadio label="Radio One" value="one"></VRadio>
-        <VRadio label="Radio Two" value="two"></VRadio>
-        <VRadio label="Radio Three" value="three"></VRadio>
+        <VRadio label="Radio One" value="one" />
+        <VRadio label="Radio Two" value="two" />
+        <VRadio label="Radio Three" value="three" />
       </VRadioGroup>
     </VContainer>
   </div>

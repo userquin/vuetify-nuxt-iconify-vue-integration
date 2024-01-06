@@ -1,6 +1,6 @@
-import type { IconSet, IconAliases } from 'vuetify';
-import { h } from 'vue';
-import { Icon } from '@iconify/vue';
+import type { IconAliases, IconSet } from 'vuetify'
+import { h } from 'vue'
+import { Icon } from '@iconify/vue'
 
 const aliases = <IconAliases>{
   /* custom ones */
@@ -46,21 +46,22 @@ const aliases = <IconAliases>{
   calendar: 'mdi:calendar',
   $checkboxOn: 'mdi-checkbox-marked',
   $checkboxOff: 'mdi-checkbox-blank-outline',
-};
+}
 
 const iconify = <IconSet>{
   component: (props) => {
-    console.log(props);
-    const { icon, tag, ...rest } = props;
-    const stringIcon = icon;
+    // eslint-disable-next-line no-console
+    console.log(props)
+    const { icon, tag, ...rest } = props
+    const stringIcon = icon as string
     return h(tag, rest, [
       h(Icon, {
         key: stringIcon,
         icon: aliases[icon as string] ?? icon,
         ...rest,
       }),
-    ]);
+    ])
   },
-};
+}
 
-export { aliases, iconify };
+export { aliases, iconify }
